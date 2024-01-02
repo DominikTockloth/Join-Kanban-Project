@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Join | Summary</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Eater&family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/summary.css">
+    <link rel="stylesheet" href="css/css-mobile/summary-responsive.css">
+    <link rel="shortcut icon" href="assets/img/join-logo.png" type="image/x-icon">
+    <script src="js/script.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/summary/summary.js"></script>
+    <script src="js/contact/contact.js"></script>
+
+
+
+</head>
+
+<body onload="initSummary()">
+    <div w3-include-html="header.html"></div>
+    <div w3-include-html="sidebar.html"></div>
+    <div class="headline-container">
+        <div class="headline">Summary
+        </div>
+        <div class="align subheadline" id="subheadline">Everything in a nutshell!</div>
+    </div>
+    <div class="summary-main">
+        <div class="summary-container">
+            <div class="sub-cont column align hover" onclick="getToBoard()"><span class="font-60"
+                    id="amountOfTasks"></span> <span class="font">Tasks in Board</span>
+            </div>
+            <div class="sub-cont column align hover" onclick="getToBoard()"><span class="font-60"
+                    id="amountTaskProgress"></span> <span class="font">Tasks in
+                    Progress</span></div>
+            <div class="sub-cont column align hover" onclick="getToBoard()"><span class="font-60"
+                    id="amountTaskAwaitFeedback"></span> <span class="font">Awaiting
+                    Feedback</span></div>
+        </div>
+        <div class="summary-container back-border hover" onclick="getToBoard()">
+            <div class="align gap width">
+                <div class="hover"><img src="assets/img/urgent-logo.png"></div>
+                <div class="column align font"> <span class="font-60"
+                        id="amountTaskUrgent"></span><br><span>Urgent</span></div>
+            </div>
+            <div class="border-grey"></div>
+            <div class="align width column ">
+                <span class="font-25" id="deadline">September 7 , 2023</span><br>
+                <span class="font">Upcoming Deadline</span>
+            </div>
+        </div>
+        <div class="summary-container">
+            <div class="sub-cont padding hover" onclick="getToBoard()">
+                <div class="align"><img src="assets/img/pencil.png"></div>
+                <div class="column align"><span class="font-60" id="amountTaskToDo"></span><span
+                        class="font">To-Do</span></div>
+            </div>
+            <div class="sub-cont padding hover" onclick="getToBoard()">
+                <div class="align"><img src="assets/img/checked.png"></div>
+                <div class="column align"><span class="font-60" id="amountTaskDone"></span><span
+                        class="font">Done</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-right"><span class="font-60" id="daytime"></span><br><span class="font-60 user-blue"
+            id="logged-in-user"></span></div>
+
+
+
+
+</body>
+
+</html>

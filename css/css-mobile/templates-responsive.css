@@ -1,0 +1,105 @@
+/*********************************************** Responsive Header **********************************************************/
+
+@media(max-width:1300px) {
+    header {
+        background-color: white;
+    }
+
+    h2 {
+        display: none;
+    }
+}
+
+@media(max-width:950px) {
+    header {
+        justify-content: space-evenly;
+        position: fixed;
+        height: 60px;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 40px;
+    }
+
+    .info-menu-container {
+        justify-content: center;
+        margin-left: 65px;
+    }
+
+    .pop-up {
+        top: 90px;
+        right: 100px;
+    }
+
+    .info-menu-container a {
+        display: none;
+    }
+
+    #join-logo-mobile {
+        height: 40px !important;
+        width: 40px !important;
+    }
+}
+
+
+/************************************************** Responsive Sidebar ***************************************************************/
+
+@media(max-width:950px) {
+    #sidebarlogo {
+        display: none;
+    }
+
+    #footer {
+        display: none;
+    }
+
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        width: auto;
+        height: 80px;
+        flex-direction: row;
+        padding: 8px;
+        z-index: 100;
+    }
+
+    .menu-content {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+        flex-direction: row;
+        margin-bottom: 0px;
+    }
+
+    .menu-content a {
+        flex-direction: column;
+    }
+
+    .sub-menu {
+        justify-content: center;
+        border-radius: 10px;
+        height: 60px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .sub-menu img{
+        margin-left: 0 !important;
+    }
+
+
+    .sub-menu span {
+        font-size: 11px !important;
+        gap: 10px;
+    }
+
+    .sub-menu a img {
+        margin-left: 0 !important;
+        height: 25px !important;
+        width: 25px !important;
+
+    }
+}

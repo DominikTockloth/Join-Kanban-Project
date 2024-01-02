@@ -1,0 +1,374 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.d-none {
+    display: none;
+}
+
+.clicked {
+    background-color: #091931;
+}
+
+.main-html {
+    height: 100vh;
+    background-color: #F6F7F8;
+}
+
+#logo-main {
+    position: absolute;
+    left: calc(100vw - 50% - 101px);
+    top: calc(100vh - 50% - 122px);
+    width: 202px;
+    height: 244px;
+    animation: logo-start 1s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+#login-logo {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 101px;
+    height: 122px;
+}
+
+.header-login {
+    display: flex;
+    justify-content: flex-end;
+    padding: 67px;
+    align-items: center;
+}
+
+.sign-up-content {
+    width: 280px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    font-weight: 400;
+}
+
+.button {
+    background-color: #2A3647;
+    height: 49px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.login-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 30px;
+    height: 385px;
+    gap: 32px;
+    padding: 50px 75px;
+}
+
+h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 61px;
+    font-weight: 700;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.border {
+    width: 150px;
+    transform: rotate(180deg);
+    border: 2px solid #29ABE2;
+    margin-top: -25px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -30px;
+    margin-top: 20px;
+}
+
+.login-content {
+    height: 35px;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    gap: 10px;
+    padding: 12px 21px 12px 21px;
+    font-size: 18px;
+}
+
+.margin-left {
+    margin-left: -45px;
+}
+
+.checkbox-remember {
+    display: flex;
+    justify-content: space-between;
+    height: 24px;
+    width: 414px;
+}
+
+.checkbox-remember input {
+    height: 24px;
+    width: 24px;
+    border-radius: 3px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.black {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.blue {
+    color: #42bdf2;
+}
+
+.login-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.button-white {
+    cursor: pointer;
+    background-color: white;
+    height: 49px;
+    width: 177px;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 8px;
+    border: 2px solid black;
+
+}
+
+a {
+    color: black !important;
+}
+
+ a:hover {
+    color: white !important;
+}
+
+.button-white:hover {
+    cursor: pointer;
+    background-color: rgb(66, 189, 242) !important;
+    border-color: rgb(66, 189, 242) !important;
+    color: white !important;
+}
+
+#messageBox {
+    background-color: rgb(42, 54, 71);
+    color: white;
+    padding: 8px;
+    font-size: 17px;
+    height: 25px;
+    min-width: 200px;
+    border-radius: 8px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 115px;
+    height: 35px;
+    width: 285px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+footer a {
+    color: #AAABAB !important;
+}
+
+footer span:hover {
+    cursor: pointer;
+    color: black;
+}
+
+@keyframes logo-start {
+    0% {
+        left: calc(100vw - 50% - 101px);
+        top: calc(100vh - 50% - 122px);
+        width: 202px;
+        height: 244px;
+    }
+
+    100% {
+        left: 50px;
+        top: 50px;
+        width: 101px;
+        height: 122px;
+    }
+}
+
+/************************************************************** Hidden Login container  ************************************************************/
+.login-visible {
+    visibility: hidden;
+    animation: hide 0s ease-in 1s;
+    animation-fill-mode: forwards;
+}
+
+/********************************************************************* Style Sign in HTML  *******************************************************/
+
+.d-none {
+    display: none;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-sign-in {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 101px;
+    height: 122px;
+}
+
+.sign-in-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sign-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 30px;
+    gap: 32px;
+    padding: 50px 50px;
+}
+
+.headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-left: -60px;
+}
+
+#checkbox-sign-in {
+    height: 24px;
+    width: 24px;
+    border-radius: 3px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.margin-left {
+    margin-left: -33px;
+}
+
+.gap {
+    gap: 8px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: white;
+    border-color: rgb(66, 189, 242);
+    background-color: rgb(66, 189, 242);
+}
+
+.button:disabled,
+.button:disabled:hover {
+    cursor: not-allowed;
+    background-color: #AAABAB;
+    border-color: #AAABAB;
+}
+
+input:focus {
+    outline: #D1D1D1;
+}
+
+.align {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 25px;
+}
+
+#checkbox-filled,
+#checkbox-empty:hover {
+    cursor: pointer;
+}
+
+/******************************************************* Sign in successfull overlay ***************************************************************/
+
+.sign-up-success-overlay {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 4;
+}
+
+.sign-up-success-container {
+    height: 140px;
+    border-radius: 10px;
+    background-color: #2A3647;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}

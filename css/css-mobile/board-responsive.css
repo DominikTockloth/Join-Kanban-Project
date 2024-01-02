@@ -1,0 +1,234 @@
+@media(max-width:950px) {
+    .progress {
+        margin-bottom: -35px;
+    }
+
+    .headline-sub-content {
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+    }
+}
+
+@media(max-width:920px) {
+
+    .arrows{
+        display: unset;
+    }
+
+    .main {
+        margin-bottom: 110px;
+    }
+
+    .progress-container {
+        flex-wrap: nowrap;
+        overflow: auto;
+        gap: 30px !important;
+        margin-bottom: 40px !important;
+    }
+
+    .progress-content {
+        cursor: pointer;
+    }
+
+    .progress-content:hover {
+        transform: unset;
+    }
+
+    .progressbar-container {
+        width: 85px;
+    }
+}
+
+@media(max-width:750px) {
+
+    .headline-container {
+        padding-left: 5px;
+        padding: 0;
+        margin-bottom: 5px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 47px
+    }
+
+    .main {
+        padding-left: 5px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-bottom: 150px;
+    }
+
+    .progress {
+        margin-right: 0px;
+        margin-bottom: -45px;
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    input{
+        padding-inline: 8px;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    #search-btn {
+        width: 0px;
+        height: 44.67px;
+    }
+
+    #amountTaskToDo {
+        margin-bottom: 10px !important;
+    }
+
+    #amountTaskDone {
+        margin-bottom: 10px !important;
+    }
+}
+
+/*************************************************    Detail Task Overlay in board.html   *********************************************************************/
+
+@media(max-width:1200px) {
+    .checkbox {
+        width: unset !important;
+    }
+}
+
+@media(max-width:800px) {
+    .progress-content-overlay {
+        width: 300px !important;
+        padding: 0px 15px !important;
+    }
+
+    .edit-task-span {
+        font-size: 30px !important;
+    }
+}
+
+@media(max-width:400px) {
+    .avatar-edit {
+        height: 30px;
+        width: 30px;
+    }
+
+    .progress-content-overlay {
+        width: 270px !important;
+    }
+
+    .p-edit-task {
+        font-size: 16px;
+    }
+}
+
+/***************************************************   Responsive Overlay Add Task in board.html   ******************************************************************/
+
+@media(max-width:750px) {
+    #clear {
+        display: none;
+    }
+
+    #create-btn {
+        width: unset;
+    }
+
+    #assigned-contact-list {
+        width: 100% !important;
+    }
+}
+
+@media(max-width:650px) {
+
+    .edit-task-container {
+        padding: 0px 15px;
+        width: 305px;
+    }
+
+    .edit-task-main {
+        width: 290px;
+    }
+
+    .sub-container {
+        width: 290px;
+    }
+
+    .input {
+        padding: 12px 2px 12px 2px;
+    }
+
+    input {
+        padding-left: 8px;
+    }
+
+    .input-font {
+        font-size: 17px;
+    }
+
+    #input-contact {
+        width: 100%;
+    }
+
+
+    #btn-contact {
+        height: 44.67px;
+        width: 50px;
+    }
+
+    #btn-category {
+        height: 46px !important;
+    }
+
+    #category-text {
+        width: 120% !important;
+    }
+
+    #category-text span {
+        font-size: 16px !important;
+    }
+
+    #subtask {
+        width: 100%;
+    }
+
+    #btn-subtask {
+        height: 44.67px;
+    }
+
+    .priority img {
+        height: 15px !important;
+        width: 18px !important;
+    }
+
+    .subtask-container img {
+        height: 16px !important;
+        width: 16px !important;
+    }
+}
+
+/*********************************************************   Edit Task overlay in board.html responsive   ***************************************************************/
+
+@media(max-width:650px) {
+    #btn-contact-editor {
+        height: 44.67px !important;
+    }
+
+    .btn-sbt-editor {
+        height: 44.67px !important;
+    }
+
+    .subtasks {
+        font-size: 13px;
+    }
+}

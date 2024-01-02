@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Contacts</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Eater&family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/css-mobile/contacts-responsive.css">
+    <script src="js/script.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/summary/summary.js"></script>
+    <script src="js/contact/contact-templates.js"></script>
+    <script src="js/contact/contact.js"></script>
+
+    <link rel="shortcut icon" href="assets/img/join-logo.png" type="image/x-icon">
+</head>
+
+<body onload="init();initContactList() ">
+    <div w3-include-html="header.html"></div>
+    <div w3-include-html="sidebar.html"></div>
+    <div class="main">
+
+<!------------------------------------------------------------------------   Contacts List ------------------------------------------------------------------>
+        <div class="contact-scrollbar" id="scrollbar">
+            <div class="scrollbar-container">
+                <div class="scrollbar-btn">
+                    <button class="button" onclick="openAddContactOverlay()">Add new Contact <img
+                            src="assets/img/add-contact.png" class="image"></button>
+                </div>
+                <div id="contacts-container" style="margin-top: 50px;"> </div>
+            </div>
+        </div>
+<!-----------------------------------------------------------------   Contact Detail View   ----------------------------------------------------------------->
+        <div class="container-right" id="container-right">
+
+            <div class="headline">
+                <h1>Contacts</h1>
+                <div class="border"> </div>
+                <span style="font-size: 27px; font-weight: 400;">Better with a team</span>
+                <img src="assets/img/arrow-left.png" id="contact-detail-arrow" class="d-none"
+                    onclick="showContactList()">
+            </div>
+            <div class="container-right-content" id="detail-contact">
+
+
+            </div>
+        </div>
+<!-------------------------------------------------------------   Add Contact Overlay  --------------------------------------------------------------------->
+        <div class="overlay-main" style="display: none;" id="add-contact-overlay">
+            <div class="overlay-container">
+
+                <div class="over-cont-top align column">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <img src="assets/img/logo-white.png" style="height: 45px; width: 45px; margin-bottom: 15px;"
+                            id="logo-overlay">
+                        <div style="font-weight: 600; font-size: 20px; cursor: pointer;"
+                            onclick="closeAddContactOverlay()" id="x-logo">
+                            X</div>
+                    </div>
+                    <div class="transform">
+                        <h1 id="hl-add-over">Add Contact</h1>
+                    </div>
+                    <div class="transform"><span style="font-size: 27px; font-weight: 400;" id="span-add-over">Tasks are
+                            better
+                            with a team!</span></div>
+                    <div class="border-overlay"></div>
+                </div>
+                <div class="over-cont-right flex" style="flex-direction: column;">
+
+                    <div class="center" style="margin-top:-40px;"><img src="assets/img/contact-person.png"
+                            style="height: 120px; width: 120px;" id="avatar-logo-add-over"></div>
+                    <form class="add-contact" style="align-items: center;" id="add-contact-cont"
+                        onsubmit="addContact(); return false ">
+
+
+                        <div class="contact-input"><input required type="text" placeholder="Name" class="login-content"
+                                id="name"><img src="assets/img/person.png" class="margin-left"
+                                style="height: 24px; width: 24px;"></div>
+                        <div class="contact-input"><input required type="email" placeholder="Email"
+                                class="login-content" id="mail"><img src="assets/img/mail.png" class="margin-left"
+                                style="height: 24px; width: 24px;"></div>
+                        <div class="contact-input"><input required type="number" min="0" step="1" placeholder="Phone"
+                                class="login-content" id="number"><img src="assets/img/phone.png" class="margin-left"
+                                style="height: 24px; width: 24px;"></div>
+
+                        <div class="flex" style="gap: 50px; margin-top: 30px;"><button class="cancel"
+                                onclick="clearAddContactForm()" id="cancel"><span>Clear</span></button>
+                            <button class="button" style="padding-left: 30px; position: unset;" onclick=""
+                                id="add-btn">Create Contact
+                                <img src="assets/img/checked.png" class="image" id="img-checked"></button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+<!------------------------------------------------  Edit Contact Overlay  ----------------------------------------------------------------------------------->
+        <div class="overlay-main-edit" id="edit-contact-container">
+        </div>
+    </div>
+</body>
+
+</html>

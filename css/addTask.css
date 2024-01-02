@@ -1,0 +1,602 @@
+body {
+    margin: 0;
+    margin-top: 96px;
+    overflow: scroll;
+    font-family: 'Inter', sans-serif;
+    background-color: #F6F7F8;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar:hover {
+    background-color: #29abe2;
+}
+
+.d-none {
+    display: none;
+}
+
+.black {
+    color: black;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap {
+    gap: 8px;
+}
+
+.margin-contact-list {
+    margin-top: -42px !important;
+    margin-bottom: 15px !important;
+}
+
+.margin-bottom {
+    margin-bottom: 35px;
+}
+
+.justify-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.font {
+    font-size: 19px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 61px;
+    font-weight: 700;
+}
+
+.headline-container {
+    padding: 20px 300px;
+    display: flex;
+    margin-bottom: -20px;
+    top: 116px;
+    position: relative;
+}
+
+.main-container {
+    padding-left: 300px;
+    margin-top: 100px;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+}
+
+.input {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid rgb(209, 209, 209);
+    padding: 12px 21px 12px 21px;
+    text-align: left;
+    margin-right: -4px;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    border: 1px solid #D1D1D1;
+    outline: none;
+}
+
+.input-font {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.input-size {
+    height: 120px;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea:focus {
+    border: 1px solid #D1D1D1;
+    outline: none;
+}
+
+button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 48px;
+    width: 195.67px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: white;
+    border: 1px solid #D1D1D1;
+    border-left-color: white;
+}
+
+#btn-contact {
+    border-left: none;
+}
+
+.not-allowed {
+    background-color: #4a4e53 !important;
+    color: #D1D1D1 !important;
+    cursor: no-drop !important;
+}
+
+.not-allowed:hover {
+    background-color: #4a4e53 !important;
+    color: #D1D1D1 !important;
+    cursor: no-drop !important;
+    border-color: #4a4e53 !important;
+}
+
+.required {
+    font-size: 11px;
+    font-weight: 500;
+    color: red;
+}
+
+
+#btn-category {
+    border-left: none;
+    height: 49.33px !important;
+}
+
+#btn-subtask {
+    border-left: none;
+}
+
+button img {
+    height: 17px;
+    width: 17px;
+    cursor: pointer;
+    padding-right: 8px;
+}
+
+button img:hover {
+    transform: scale(1.1);
+}
+
+.border-style {
+    border-right-color: white;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.contact-list {
+    border-radius: 0px 0px 10px 10px;
+    border-top: hidden;
+    background-color: white;
+    border: 1px solid #D1D1D1;
+    margin-top: -7px;
+    border-style: solid;
+    border-top-style: none;
+    cursor: pointer;
+    max-height: 160px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 90%;
+}
+
+.clicked {
+    background-color: #091931;
+}
+
+.contact-list::-webkit-scrollbar-thumb {
+    width: 10px;
+    color: #e1dede;
+    border-radius: 10px;
+}
+
+.contact-list::-webkit-scrollbar-thumb:hover {
+    background-color: #29abe2;
+}
+
+.category-list {
+    border-radius: 0px 0px 10px 10px;
+    border-top: hidden;
+    background-color: white;
+    border: 1px solid #D1D1D1;
+    border-top-style: none;
+    margin-top: -7px;
+    border-style: solid;
+    cursor: pointer;
+    max-height: 100px;
+
+}
+
+.list-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #3c3f43;
+    padding: 7px;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.list-content input:hover {
+    cursor: pointer;
+}
+
+.list-content:hover {
+    background-color: #e1dede;
+}
+
+.list-content input {
+    width: unset !important;
+}
+
+.border {
+    background-color: #D1D1D1;
+    width: 2px;
+}
+
+.priority {
+    display: flex;
+    justify-content: space-between;
+}
+
+.priority div {
+    border: none;
+    box-shadow: 3px 1px 1px 0px #00000040;
+}
+
+.priority div:hover {
+    box-shadow: 0px 3px 3px 0px #00000040;
+    cursor: pointer;
+}
+
+.subtask-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
+    height: 70px;
+    overflow-y: auto;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+li {
+    margin-left: 40px;
+}
+
+.subtasks {
+    width: 100%;
+    height: 40px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 10px;
+    margin-top:6px;
+    margin-bottom: 6px;
+}
+
+.edit-container {
+    display: flex;
+    height: 40px;
+    width: 100%;
+}
+
+.subtask-btn {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    padding-right: 20px;
+}
+
+.subtask-btn img {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.subtask-editor-input{
+    border-width: 0 !important;
+    padding-inline: 15px !important;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 20px;
+    width: 100%;
+    
+}
+
+.subtask-editor-input input:focus{
+   border: none;
+}
+
+.subtasks:hover {
+    background-color: #e1dede;
+}
+
+.subtasks img {
+    height: 19px !important;
+    width: 19px !important;
+    object-fit: contain;
+}
+
+.subtask-images {
+    display: flex;
+    width: 90px;
+    justify-content: space-evenly;
+}
+
+#edit-pencil {
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+}
+
+.subtasks img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    background-color: rgb(42, 54, 71);
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 8px;
+    color: white;
+    width: 180px;
+    gap: 10px;
+
+}
+
+.button:hover {
+    background-color: white;
+    color: rgb(42, 54, 71);
+    border: 2px solid rgb(42, 54, 71);
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+.button img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+.clear {
+    background-color: white;
+    border: 2px solid black;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+}
+
+.clear:hover {
+    background-color: rgb(42, 54, 71);
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.back-white {
+    background-color: white;
+}
+
+.back-urgent {
+    background-color: #FF3D00;
+}
+
+.back-medium {
+    background-color: #FFA800;
+}
+
+.back-low {
+    background-color: #7AE229;
+}
+
+.prio-choosed {
+    color: white;
+    font-weight: 600;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    font-weight: 500;
+    color: white;
+    border-radius: 100%;
+    border: 2px solid white;
+    margin-right: 10px;
+}
+
+.is-checked {
+    background-color: #2A3647;
+    color: white;
+}
+
+.is-checked:hover {
+    background-color: #4a4e53 !important;
+}
+
+.pa-le {
+    padding-left: 20px;
+}
+
+.selected-contacts {
+    display: flex;
+    margin-left: 30px;
+    width: 85%;
+    margin-bottom: 15px;
+}
+
+.avatar-checked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    font-weight: 500;
+    color: white;
+    border-radius: 100%;
+    border: 2px solid white;
+    margin-left: -11px;
+}
+
+/*****************************************************  Style of scrollbar  *********************************************************************************/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #29ABE2;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/***************************************************** Add Task added to board overlay *********************************************************************/
+
+.added-task-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    z-index: 200;
+}
+
+.added-task-content {
+    height: 150px;
+    width: 700px;
+    border-radius: 10px;
+    background-color: #2A3647;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+/***********************************************************  Add Task overlay for board.html   ****************************************************************/
+.overlay-main {
+    background-color: white;
+    position: fixed;
+    border-radius: 10px;
+    padding: 0px 20px 10px 20px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.overlay-bg {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 102;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.headline-overlay {
+    padding-left: 45px;
+    display: flex;
+    align-items: center;
+    gap: 770px;
+}
+
+
+.overlay {
+    background-color: white;
+    padding: 50px !important;
+    border-radius: 10px;
+    display: flex;
+    margin-top: -45px
+}
+
+.overlay img {
+    height: 20px !important;
+    width: 20px !important;
+    object-fit: contain;
+}
+
+#ctc-cont {
+    z-index: 1;
+}

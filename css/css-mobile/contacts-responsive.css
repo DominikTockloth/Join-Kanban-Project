@@ -1,0 +1,191 @@
+/**************************************************** Contact.html responsive **************************************/
+@media(max-width:1250px) {
+    .border {
+        display: none;
+    }
+
+    .contact-scrollbar {
+        width: -webkit-fill-available;
+    }
+}
+
+@media(max-width:1040px) {
+    .headline {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+}
+
+@media(min-width:950px){
+    #contact-detail-arrow{
+        display: none;
+    }
+}
+
+@media(max-width:950px) {
+
+    .d-none {
+        display: none;
+    }
+
+    .main{
+        padding-left: 0;
+    }
+
+    .container-right {
+        padding: 20px 20px;
+        margin-left: unset;
+    }
+
+    #contacts-container {
+        margin-top: 0px;
+    }
+
+    .headline {
+        align-items: unset;
+        height: 100px;
+    }
+
+    .contact-scrollbar {
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
+        top: 100px;
+        margin-bottom: 80px;
+    }
+
+    .avatar-big {
+        height: 70px;
+        width: 70px;
+        font-size: 35px;
+    }
+
+    h3 {
+        font-weight: 600 !important;
+        font-size: 27px !important;
+    }
+
+    .border {
+        position: absolute;
+        transform: rotate(180deg);
+        width: 120px;
+        top: 220px;
+    }
+}
+
+@media(max-width:750px) {
+    .main {
+        padding-left: 0;
+    }
+
+    #contact-detail-arrow {
+        right: 20px;
+        top: 35px;
+    }
+
+    .headline {
+        margin-top: unset;
+    }
+}
+
+/***************************** Add contact overlay responsive ***********************/
+
+@media(max-width:550px) {
+
+    #cancel {
+        display: none;
+    }
+
+    #hl-add-over {
+        font-size: 35px !important;
+    }
+
+    #span-add-over {
+        font-size: 13px !important;
+    }
+
+    #avatar-logo-add-over {
+        height: 90px !important;
+        width: 90px !important;
+    }
+
+    #add-contact-cont {
+        margin-top: 15px !important;
+        margin-left: 0 !important;
+    }
+
+    #add-btn {
+        padding: 20px !important;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .center {
+        margin-top: -35px !important;
+    }
+
+}
+
+/************************** Edit Contact Overlay responsive ******************************/
+
+@media(max-width:550px) {
+    .overlay-container {
+        height: 580px;
+        width: 330px;
+    }
+
+    #logo-edit-overlay {
+        height: 40px !important;
+        width: 40px !important;
+    }
+
+    .logo-container {
+        margin-bottom: 12px;
+    }
+
+    #edit-overlay-headline {
+        font-size: 40px;
+    }
+
+    .avatar-edit {
+        height: 75px;
+        width: 75px;
+        font-size: 30px;
+        margin-top: -28px;
+        margin-bottom: 15px;
+    }
+
+
+    #task-span {
+        font-size: 15px !important;
+    }
+
+    .login-content {
+        height: 22px;
+        width: 250px;
+        font-size: 16px;
+    }
+
+    .add-contact {
+        margin-top: 25px;
+        margin-left: 10px;
+    }
+
+    .cancel {
+        width: 110px;
+        font-size: 16px;
+        height: 45px;
+        padding: 10px;
+    }
+
+    .save-btn {
+        padding: 20px;
+        font-size: 16px;
+        height: 26px;
+        gap: 10px;
+    }
+
+
+
+}

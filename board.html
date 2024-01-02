@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join | Board</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Eater&family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/board2.css" />
+  <link rel="stylesheet" href="css/board.css" />
+  <link rel="stylesheet" href="css/addTask.css" />
+  <link rel="stylesheet" href="css/css-mobile/board-responsive.css" />
+  <script src="js/script.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/register.js"></script>
+  <script src="js/summary/summary.js"></script>
+ 
+  <script src="js/board/board-templates.js"></script>
+   <script src="js/addTask/addTaskrender.js"></script>
+  <script src="js/board/board-edit.js"></script>
+  <script src="js/board/board-edit2.js"></script>
+  <script src="js/board/board-addTask2.js"></script>
+  <script src="js/board/board-addTask.js"></script>
+  <script src="js/board/board.js"></script>
+  <script src="js/board/board2.js"></script>
+
+  <script src="js/contact/contact.js"></script>
+
+
+  <link rel="shortcut icon" href="assets/img/join-logo.png" type="image/x-icon" />
+</head>
+
+<body onload="initBoard()">
+  <div w3-include-html="header.html"></div>
+  <div w3-include-html="sidebar.html"></div>
+  <!-------------------------------------------------------------   Add Task Overlay    ----------------------------------------------------------------------------------->
+  <div class="overlay-bg" id="add-task-overlay" style="display: none">
+  </div>
+  </div>
+
+  <!--------------------------------------------------------------------   Main HTML Board   ---------------------------------------------------------------------------->
+
+  <div class="headline-container">
+    <div>
+      <h1>Board</h1>
+    </div>
+    <div class="headline-sub-content">
+      <div class="align" id="content">
+        <input type="text" placeholder="Find Task" id="search" class="input input-font border-style black"
+          onfocus="changeBorderColorSearchBar(this)" onblur="resetBorderColorSearchBar(this)"
+          oninput="searchingForTasks()">
+        <button id="search-btn"><img src="assets/img/search-logo.png"></button>
+      </div>
+      <button class="button" onclick="openOverlayToDo()">
+        Add Task <img src="assets/img/add.png" />
+      </button>
+    </div>
+  </div>
+  <div class="main">
+    <div class="progress">
+      <div class="progress-headline">
+        <div>
+          <h3>To do</h3>
+        </div>
+        <div>
+          <img src="assets/img/plus-button.png" onclick="openOverlayToDo()" />
+        </div>
+      </div>
+      <div class="progress-container" id="toDo" ondragover=" allowDrop(event)" ondrop="dropToStatus('toDo')">
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-headline">
+        <div>
+          <h3>In progress</h3>
+        </div>
+        <div>
+          <img src="assets/img/plus-button.png" onclick="openOverlayInProgress()" />
+        </div>
+      </div>
+      <div class="progress-container" id="inProgress" ondragover=" allowDrop(event)"
+        ondrop="dropToStatus('inProgress')">
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-headline">
+        <div>
+          <h3>Await feedback</h3>
+        </div>
+        <div>
+          <img src="assets/img/plus-button.png" onclick="openOverlayAwaitingFeedback()" />
+        </div>
+      </div>
+      <div class="progress-container" id="awaitingFeedback" ondragover=" allowDrop(event)"
+        ondrop="dropToStatus('awaitingFeedback')">
+      </div>
+    </div>
+    <div class="progress">
+      <div class="progress-headline">
+        <div>
+          <h3>Done</h3>
+        </div>
+      </div>
+      <div class="progress-container" id="doneTask" ondragover="allowDrop(event)" ondrop="dropToStatus('doneTask')">
+      </div>
+    </div>
+  </div>
+
+
+  <!-------------------------------------------------------------------   Detail Task Overlay   ------------------------------------------------------------------------>
+
+  <div class="detail-task-bg" id="detail-task-overlay" style="display: none;">
+  </div>
+
+  <!--------------------------------------------------------------------   Edit Task Overlay   -------------------------------------------------------------------------->
+  <div class="edit-bg d-none" id="edit-task-overlay"> </div>
+
+</body>
+
+</html>

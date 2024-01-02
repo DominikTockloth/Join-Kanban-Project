@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="stylesheet" href="css/templates.css">
+    <link rel="stylesheet" href="css/css-mobile/templates-responsive.css">
+    <script src="js/storage.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="shortcut icon" href="assets/img/join-logo.png" type="image/x-icon">
+</head>
+
+<body onload="init()">
+    <header>
+        <div><img src="assets/img/join-logo.png" id="join-logo-mobile"></div>
+        <div>
+            <h2>Kanban Project Management Tool </h2>
+        </div>
+        <div class="info-menu-container" id="info-menu"><a href="help.html"><img src="assets/img/help.png"></a>
+            <div class="info-menu" onclick="openPopUp()" id="initals-box"></div>
+        </div>
+        <div class="pop-up" id="popUp" style="display: none;" onclick="closePopUp()">
+            <div><span><a href="legalNotice.html">Legal Notice</a></span></div>
+            <div><span><a href="privacy.html">Privacy Policy</a></span></div>
+            <div><span><a href="index.html">Log out</a></span></div>
+        </div>
+
+    </header>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Add Task</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Eater&family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="js/storage.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/contact/contact.js"></script>
+    <script src="js/summary/summary.js"></script>
+    <script src="js/board/board-edit.js"></script>
+    <script src="js/board/board2.js"></script>
+    <script src="js/board/board-templates.js"></script>
+    <script src="js/board/board.js"></script>
+    <script src="js/addTask/addTask-templates.js"></script>
+    <script src="js/addTask/addTaskrender.js"></script>
+    <script src="js/addTask/create-task.js"></script>
+    <script src="js/addTask/create-task-2.js"></script>
+    <script src="js/addTask/addTask.js"></script>
+    <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="css/addTask.css">
+    <link rel="stylesheet" href="css/css-mobile/addTask-responsive.css">
+    <link rel="shortcut icon" href="assets/img/join-logo.png" type="image/x-icon" />
+    <script>window.addEventListener('load', init);</script>
+</head>
+
+<body onload="init()">
+    <div w3-include-html="header.html"></div>
+    <div w3-include-html="sidebar.html"></div>
+    <div class="headline-container">
+        <h1>Add Task</h1>
+    </div>
+    <div class="main-container">
+        <div class="sub-container">
+            <div class="column margin-bottom"><span class="font">Title <span class="required" style="margin-left: 8px;">
+                        * required</span></span>
+                <input type="text" placeholder="Enter a title" id="title" class="input input-font"
+                    onfocus="changeBorderColor(this)" onblur="resetBorderColor(this)">
+            </div>
+            <div class="column margin-bottom"><span class="font">Description<span class="required"
+                        style="margin-left: 8px;"> * required</span></span>
+                <textarea type="text" placeholder="Enter a Description" id="description"
+                    class="input input-font input-size" cols="30" rows="8" onfocus="changeBorderColor(this)"
+                    onblur="resetBorderColor(this)"></textarea>
+            </div>
+            <div class="column margin-bottom" id="assigned-contact-list">
+                <span class="font">Assigned to</span>
+                <div class="align" style="height: 37px; z-index: 1;"> <input disabled type="text"
+                        placeholder="Select contacts to assign" class="input input-font border-style black"
+                        id="input-contact">
+                    <button id="btn-contact"><img src="assets/img/dropdown-arrow.png" onclick="toggleAssignList()"
+                            id="dropdown-arrow"><img src="assets/img/close.png" class="d-none" id="close-list"
+                            onclick="closeAssignList()"></button>
+                </div>
+                <div class="contact-list d-none" id="assign-list-content">
+                </div>
+            </div>
+            <div class="selected-contacts" id="selected-contacts"></div>
+        </div>
+        <div class="border"></div>
+        <div class="sub-container">
+            <div class="column margin-bottom"><span class="font">Due date<span class="required"
+                        style="margin-left: 8px;"> * required</span></span>
+                <input type="date" id="date" class="input input-font" onfocus="changeBorderColor(this)" onblur="resetBorderColor(this)">
+            </div>
+            <div class="column margin-bottom"><span class="font">Prio</span>
+                <div class="priority">
+                    <div class="input input-font align gap back-white padd-resp" id="urgent"
+                        onclick="switchTaskPriority('urgent')"> Urgent <img src="assets/img/urgent_red.svg"
+                            id="img-urgent">
+                    </div>
+                    <div class="input input-font align gap back-medium padd-resp prio-choosed" id="medium"
+                        onclick="switchTaskPriority('medium')"> Medium<img src="assets/img/medium_white.svg"
+                            id="img-medium">
+                    </div>
+                    <div class="input input-font align gap back-white padd-resp" id="low"
+                        onclick="switchTaskPriority('low')">
+                        Low<img src="assets/img/low_green.svg" id="img-low"></div>
+                </div>
+            </div>
+            <div class="column margin-bottom"><span class="font">Category <span class="required"
+                        style="margin-left: 8px;"> * required</span></span>
+                <div class="align" id="input-category" style="z-index: 1;">
+                    <div id="category-text" class="input input-font border-style black" style="width: 100%;"><span
+                            style="color: #3c3f43;">Select Task Category</span></div>
+                    <button id="btn-category"><img src="assets/img/dropdown-arrow.png" id="open-category"
+                            onclick="toggleCategoryList()">
+                        <img src="assets/img/clear.svg" id="close-category" class="d-none"
+                            onclick="toggleCategoryList()"></button>
+                </div>
+                <div class="category-list d-none" id="category-list"></div>
+            </div>
+            <div class="column margin-bottom"><span class="font">Subtasks</span>
+                <div class="align" style="z-index: 1;"> <input type="text" placeholder="Add new subtask" id="subtask"
+                        class="input input-font border-style black" onfocus="toggleBorderColor('subtask', 'btn-subtask');">
+                    <button id="btn-subtask"><img src="assets/img/plus-sign.png" onclick="addSubTask()"></button>
+                </div>
+            </div>
+            <ul class="subtask-container" id="subtask-container">
+
+            </ul>
+            <div class="buttons">
+                <div class="clear" onclick="clearAddTaskForm()">Clear X </div>
+                <div><button class="button not-allowed" id="btn-create" onclick="createTask('toDo')"
+                        disabled><span>Create Task</span> <img src="assets/img/checked.png"></button></div>
+            </div>
+        </div>
+    </div>
+    <div class="added-task-overlay" style="display: none;" id="add-task-to-board-overlay">
+        <div class="added-task-content">Task added to board</div>
+    </div>
+
+</body>
+
+</html>

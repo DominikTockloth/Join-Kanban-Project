@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Sign up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css-mobile/log-sign-in.css">
+    <script src="js/storage.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="shortcut icon" href="assets/img/join-logo.png" type="image/x-icon">
+</head>
+
+<body onload="init()">
+    <img src="assets/img/join-logo.png" id="logo-sign-in">
+    <div class="main-html align-center">
+        <div class="sign-in-main">
+            <div class="sign-in-container">
+                <div class="headline">
+                    <div><a href="index.html"><img src="assets/img/arrow-left.png" id="back-arrow"></a></div>
+                    <div>
+                        <h1> Sign up</h1>
+                    </div>
+                </div>
+                <div class="border margin-left"></div>
+                <form onsubmit="passwordValidation('sign-in');  return false;">
+                    <div class="flex"><input required type="text" placeholder="Name" class="login-content"
+                            id="user"><img src="assets/img/person.png" class="margin-left"></div>
+                    <div class="flex"><input required type="email" placeholder="Email" class="login-content"
+                            id="email"><img src="assets/img/mail.png" class="margin-left"></div>
+                    <div class="flex"><input required type="password" placeholder="Password" class="login-content" minlength="6"
+                            id="password"><img src="assets/img/lock.png" class="margin-left"></div>
+
+                    <div class="flex"><input required type="password" placeholder="Confirm Password"
+                            class="login-content" id="passwordconfirm"><img src="assets/img/lock.png"
+                            class="margin-left"></div>
+                    <div class="align-center gap column">
+                        <div class="align"><img src="assets/img/checkbox-empty.png" id="checkbox-empty"
+                                onclick="changeCheckboxToFilled()">
+                            <img src="assets/img/checkbox-filled.png" id="checkbox-filled" onclick="changeCheckboxToEmpty()" class="d-none">
+                            I accept the <a class="blue" style="font-weight: 600;" href="privacy.html" target="_blank">Privacy Policy</a></span>
+                        </div>
+                        <div> <button class="button" id="signupBtn" disabled>Sign up</button></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------- Sign in success overlay -------------------------------------------->
+    <div class="sign-up-success-overlay d-none" id="signin-succsess" >
+        <div class="sign-up-success-container">Sign in was successful</div>
+
+    </div>
+
+</body>
+
+</html>

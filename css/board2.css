@@ -1,0 +1,507 @@
+/****************************************** Edit Task Overlay in board.html ***********************************************/
+
+
+.clicked {
+  background-color: #091931;
+}
+
+.edit-bg {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.edit-task-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: white;
+  border-radius: 25px;
+  padding: 0px 25px;
+  width: 550px;
+  max-height: 590px;
+  box-shadow: 0px 0px 14px 12px #00000014;
+}
+
+.exit-edit-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+textarea {
+  resize: none;
+}
+
+.exit {
+  width: 27px;
+  height: 27px;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: #b5b3b3;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-btn {
+  height: 80px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+  gap: 30px;
+  margin-top: 8px;
+}
+
+.color-bl {
+  color: #3c3f43;
+}
+
+
+.exit:hover {
+  background-color: #a5a8ad;
+  color: white;
+}
+
+.edit-task-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-container {
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 0.5em;
+  /* Breite der Scrollbar für Webkit-Browser wie Chrome und Safari */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  /* Farbe des Scrollbalken-Griffs für Webkit-Browser */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Farbe des Scrollbalken-Tracks für Webkit-Browser */
+}
+
+.scroll-container::-webkit-scrollbar-corner {
+  background-color: transparent;
+  /* Farbe der Ecke zwischen den vertikalen und horizontalen Scrollbalken für Webkit-Browser */
+}
+
+/* Firefox Scrollbar Styling */
+.scroll-container {
+  scrollbar-width: thin;
+  /* Verwende 'auto' oder 'thin' für Firefox-Unterstützung */
+}
+
+.scroll-container::-moz-scrollbar {
+  width: 0.5em;
+  /* Breite der Scrollbar für Firefox */
+}
+
+.scroll-container::-moz-scrollbar-thumb {
+  background-color: transparent;
+  /* Farbe des Scrollbalken-Griffs für Firefox */
+}
+
+.scroll-container::-moz-scrollbar-track {
+  background-color: transparent;
+  /* Farbe des Scrollbalken-Tracks für Firefox */
+}
+
+
+
+.d-none {
+  display: none;
+}
+
+.black {
+  color: black;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap {
+  gap: 8px;
+}
+
+.margin-contact-list {
+  margin-top: -42px !important;
+  margin-bottom: 15px !important;
+}
+
+.margin-bottom {
+  margin-bottom: 35px;
+}
+
+.justify-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.font {
+  font-size: 19px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 61px;
+  font-weight: 700;
+}
+
+.headline-container {
+  padding: 20px 300px;
+  display: flex;
+  margin-bottom: -20px;
+  top: 116px;
+  position: relative;
+}
+
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+}
+
+.input {
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid #D1D1D1;
+  padding: 12px 21px 12px 21px;
+  text-align: left;
+  margin-right: -4px;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+input:focus {
+  border: 2px solid #D1D1D1;
+  outline: none;
+}
+
+.input-font {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.input-size {
+  height: 120px;
+}
+
+textarea:focus {
+  border: 2px solid #D1D1D1;
+  outline: none;
+}
+
+button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50.67px;
+  width: 195.67px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: white;
+  border: 2px solid #D1D1D1;
+  border-left-color: white;
+
+}
+
+#btn-contact-editor {
+  border-left: none;
+}
+
+
+button img {
+  height: 17px !important;
+  width: 17px !important;
+  cursor: pointer;
+  padding-right: 8px;
+}
+
+button img:hover {
+  transform: scale(1.1);
+}
+
+.border-style {
+  border-right-color: white;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.contact-list {
+  border-radius: 0px 0px 10px 10px;
+  border-top: hidden;
+  background-color: white;
+  border: 2px solid #D1D1D1;
+  margin-top: -7px;
+  border-style: solid;
+  border-top-style: none;
+  cursor: pointer;
+  max-height: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 90%;
+}
+
+.contact-list::-webkit-scrollbar {
+  width: 10px;
+  background-color: #29abe2;
+  border-radius: 10px;
+}
+
+.category-list {
+  border-radius: 0px 0px 10px 10px;
+  border-top: hidden;
+  background-color: white;
+  border: 2px solid #D1D1D1;
+  border-top-style: none;
+  margin-top: -7px;
+  border-style: solid;
+  cursor: pointer;
+  max-height: 100px;
+
+}
+
+.list-content {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #3c3f43;
+  padding: 7px;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.list-content input:hover {
+  cursor: pointer;
+}
+
+.list-content:hover {
+  background-color: #e1dede;
+}
+
+.list-content input {
+  width: unset !important;
+}
+
+.border {
+  background-color: #D1D1D1;
+  width: 2px;
+}
+
+.priority {
+  display: flex;
+  justify-content: space-between;
+}
+
+.priority div {
+  border: none;
+  box-shadow: 3px 1px 1px 0px #00000040;
+}
+
+.priority div:hover {
+  box-shadow: 0px 3px 3px 0px #00000040;
+  cursor: pointer;
+}
+
+.subtask-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -30px;
+  margin-bottom: 50px;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+
+li {
+  margin-left: 40px;
+}
+
+.subtasks {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 10px;
+}
+
+.subtasks:hover {
+  background-color: #e1dede;
+}
+
+.subtasks-container img {
+  margin-right: 25px;
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+
+}
+
+.subtasks img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: rgb(42, 54, 71);
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 8px;
+  color: white;
+  width: 180px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  color: rgb(42, 54, 71);
+  cursor: pointer;
+  border: 2px solid rgb(42, 54, 71);
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
+.button img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+}
+
+.clear {
+  background-color: white;
+  border: 2px solid black;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 8px;
+  color: black;
+  cursor: pointer;
+}
+
+.clear:hover {
+  background-color: rgb(42, 54, 71);
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.back-white {
+  background-color: white;
+}
+
+.back-urgent {
+  background-color: #FF3D00;
+}
+
+.back-medium {
+  background-color: #FFA800;
+}
+
+.back-low {
+  background-color: #7AE229;
+}
+
+.prio-choosed {
+  color: white;
+  font-weight: 600;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  font-weight: 500;
+  color: white;
+  border-radius: 100%;
+  border: 2px solid white;
+  margin-right: 10px;
+}
+
+.is-checked-editor {
+  background-color: #2A3647;
+  color: white !important;
+}
+
+.is-checked-editor:hover {
+  background-color: #4a4e53 !important;
+}
+
+.pa-le {
+  padding-left: 20px;
+}
+
+.selected-contacts {
+  display: flex;
+  margin-left: 30px;
+  width: 85%;
+  margin-bottom: 15px;
+}
+
+.avatar-checked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  font-weight: 500;
+  color: white;
+  border-radius: 100%;
+  border: 2px solid white;
+  margin-left: -11px;
+}

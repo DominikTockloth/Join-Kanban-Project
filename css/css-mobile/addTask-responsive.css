@@ -1,0 +1,132 @@
+@media(max-width:750px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 85rem;
+    }
+
+    .headline-container {
+        position: absolute;
+        padding: 0;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        margin-top: -20px;
+    }
+
+    .font {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .main-container {
+        width: 325px;
+        padding-left: 0px;
+        margin-top: -30px;
+        gap: 0;
+    }
+
+    .sub-container {
+        width: -webkit-fill-available;
+    }
+
+    .subtasks {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .subtask-editor-input {
+        font-size: 13px;
+    }
+
+    .subtask-btn {
+        padding-right: 10px;
+    }
+
+    .border {
+        display: none;
+    }
+
+    .priority {
+        gap: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding-inline: 10px;
+    }
+
+    .input {
+        width: auto;
+    }
+
+    .input-font {
+        font-size: 15px;
+    }
+
+    .list-content {
+        font-size: 15px;
+    }
+
+    button {
+        height: 42.67px;
+        margin-left: -5px;
+    }
+
+    #btn-category {
+        border-left: none;
+        height: 43.34px !important;
+    }
+
+    button img {
+        height: 15px;
+    }
+
+    textarea {
+        height: 60px !important;
+        width: 100%;
+    }
+
+    .padd-resp {
+        padding: 10px 10px 10px 10px !important;
+    }
+
+    #contacts-to-assign {
+        display: none;
+    }
+
+    .margin-bottom {
+        margin-bottom: 25px;
+    }
+
+    .button {
+        height: 50px;
+    }
+
+    .clear {
+        padding: 8px;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+    }
+
+    ul {
+        margin-top: 18px;
+    }
+
+}
+
+/*******************************************************   Task added to board overlay responsive   *****************************************************/
+
+@media(max-width:600px) {
+    .added-task-content {
+        font-size: 50px;
+        text-align: center;
+    }
+}

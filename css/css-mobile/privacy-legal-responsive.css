@@ -1,0 +1,26 @@
+/**************************** Legal Notice responsive + Privacy Policy responsive *************************/
+
+@media(max-width:950px) {
+
+    .main {
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: 100px;
+    }
+
+    h1 {
+        font-size: 28px !important;
+    }
+
+    .h2 {
+        font-size: 25px !important;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}

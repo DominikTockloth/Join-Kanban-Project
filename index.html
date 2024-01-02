@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Log in</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Eater&family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/join-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css-mobile/log-sign-in.css">
+    <script src="js/storage.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body onload="initIndex()">
+    <div class="main-html">
+        <header class="header-login">
+
+            <div class="sign-up-content login-visible" id="login-head">
+                <p>Not a Join user?</p><a href="signIn.html"><button class="button">Sign up</button></a>
+            </div>
+        </header>
+        <div class="login-main login-visible" id="login-main">
+            <div class="login-container">
+                <h1>Log in</h1>
+                <div class="border"></div>
+                <form onsubmit="userLogIn('user'); return false;">
+                    <div class="flex"><input required type="email" placeholder="Email" class="login-content"
+                            id="email"><img src="assets/img/mail.png" class="margin-left"></div>
+                    <div class="flex"><input required type="password" placeholder="Password" class="login-content"
+                            id="password"><img src="assets/img/lock.png" class="margin-left"></div>
+                    <div class="checkbox-remember flex"><span class="black"><input type="checkbox">Remember
+                            me</span>
+                    </div>
+                    <div class="login-buttons flex">
+                        <button class="button">Log in </button>
+                        <button class="button-white" onclick="userLogIn('Guest')">Guest Log
+                                in</button>
+                    </div>
+                </form>
+            </div>
+            <footer>
+                <div><a href="privacy.html" target="_blank"><span>Privacy Policy</span></a></div>
+                <div><a href="legalNotice.html" target="_blank"><span>Legal Notice</span></a></div>
+            </footer>
+        </div>
+    </div>
+    <img src="assets/img/join-logo.png" id="logo-main">
+</body>
+<!--             <div><img src="assets/img/join-logo.png" id="login-logo"></div>-->
+
+</html>
