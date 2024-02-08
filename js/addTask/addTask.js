@@ -94,13 +94,13 @@ function switchUrgentTask(urgentTask, imgUrgent, isSwitched) {
         urgentTask.classList.remove('back-white');
         urgentTask.classList.add('back-urgent');
         urgentTask.classList.add('prio-choosed');
-        imgUrgent.src = 'assets/img/urgent_white.svg';
+        imgUrgent.src = '/assets/img/urgent_white.svg';
     } else {
         // Changes the background color and image back of urgent priority
         urgentTask.classList.remove('back-urgent');
         urgentTask.classList.add('back-white');
         urgentTask.classList.remove('prio-choosed');
-        imgUrgent.src = 'assets/img/urgent_red.svg';
+        imgUrgent.src = '/assets/img/urgent_red.svg';
     }
 }
 
@@ -111,12 +111,12 @@ function switchMediumTask(mediumTask, imgMedium, isSwitched) {
         mediumTask.classList.remove('back-white');
         mediumTask.classList.add('back-medium');
         mediumTask.classList.add('prio-choosed');
-        imgMedium.src = 'assets/img/medium_white.svg';
+        imgMedium.src = '/assets/img/medium_white.svg';
     } else {
         mediumTask.classList.remove('back-medium');
         mediumTask.classList.add('back-white');
         mediumTask.classList.remove('prio-choosed');
-        imgMedium.src = 'assets/img/medium_yellow.svg';
+        imgMedium.src = '/assets/img/medium_yellow.svg';
     }
 
 }
@@ -128,12 +128,12 @@ function switchLowTask(lowTask, imgLow, isSwitched) {
         lowTask.classList.remove('back-white');
         lowTask.classList.add('back-low');
         lowTask.classList.add('prio-choosed')
-        imgLow.src = 'assets/img/low_white.svg';
+        imgLow.src = '/assets/img/low_white.svg';
     } else {
         lowTask.classList.remove('back-low');
         lowTask.classList.add('back-white');
         lowTask.classList.remove('prio-choosed')
-        imgLow.src = 'assets/img/low_green.svg';
+        imgLow.src = '/assets/img/low_green.svg';
     }
 
 }

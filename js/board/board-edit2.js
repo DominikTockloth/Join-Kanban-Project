@@ -127,13 +127,13 @@ function priorityImageSelectedInEditor(id) {
     let priorityLow = document.getElementById(`low-${id}`);
     let priorityImage = '';
     if (priorityUrgent.classList.contains('back-urgent')) {
-        priorityImage = 'assets/img/prio-urgent.png';
+        priorityImage = '/assets/img/prio-urgent.png';
     }
     if (priorityMedium.classList.contains('back-medium')) {
-        priorityImage = 'assets/img/prio-medium.png';
+        priorityImage = '/assets/img/prio-medium.png';
     }
     if (priorityLow.classList.contains('back-low')) {
-        priorityImage = 'assets/img/prio-low.png';
+        priorityImage = '/assets/img/prio-low.png';
     }
     return priorityImage;
 }

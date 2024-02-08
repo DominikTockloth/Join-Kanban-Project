@@ -154,13 +154,13 @@ function priorityImageSelected() {
     let priorityLow = document.getElementById('low');
     let priorityImg = '';
     if (priorityUrgent.classList.contains('back-urgent')) {
-        priorityImg = 'Join/assets/img/prio-urgent.png';
+        priorityImg = '/assets/img/prio-urgent.png';
     }
     if (priorityMedium.classList.contains('back-medium')) {
-        priorityImg = 'Join/assets/img/prio-medium.png';
+        priorityImg = '/assets/img/prio-medium.png';
     }
     if (priorityLow.classList.contains('back-low')) {
-        priorityImg = 'Join/assets/img/prio-low.png';
+        priorityImg = '/assets/img/prio-low.png';
     }
     return priorityImg;
 }
